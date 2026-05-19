@@ -8,10 +8,10 @@ namespace CookieClicker
 {
     public class Game
     {
-        private double Cookies { get; set; }
-        private double CookiesPerClick { get; set; }
-        private double CookiesPerSecond { get; set; }
-        private int TotalClicks { get; set; }
+        public double Cookies { get; private set; }
+        public double CookiesPerClick { get; private set; }
+        public double CookiesPerSecond { get; private set; }
+        public int TotalClicks { get; private set; }
 
         /**
          * @returns amount of cookies given

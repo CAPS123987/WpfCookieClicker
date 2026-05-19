@@ -23,9 +23,15 @@ namespace CookieClicker
             InitializeComponent();
         }
 
-        private void btnCookieClick(object sender, RoutedEventArgs e)
+        private void btnCookieClickEvent(object sender, RoutedEventArgs e)
         {
+            game.handleClick();
+            updateMainWindow();
+        }
 
+        public void updateMainWindow()
+        {
+            lblCookieCount.Content = "Počet sušenek: " + game.Cookies;
         }
     }
 }
