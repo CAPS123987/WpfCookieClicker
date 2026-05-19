@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Choco_chip_cookie.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Choco_chip_cookie.png" />
+  </ItemGroup>
+
 </Project>

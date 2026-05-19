@@ -12,13 +12,23 @@ namespace CookieClicker
         public double CookiesPerClick { get; private set; }
         public double CookiesPerSecond { get; private set; }
         public int TotalClicks { get; private set; }
+        public double TotalCookies { get; private set; }
+        public int TotalUpgrades { get; private set; }
+
+        public Game()
+        {
+            Cookies = 0;
+            CookiesPerClick = 1;
+        }
 
         /**
          * @returns amount of cookies given
          */
         public double handleClick()
         {
-            this.Cookies += this.CookiesPerClick;
+            Cookies += CookiesPerClick;
+            TotalCookies += CookiesPerClick;
+            TotalClicks++;
             return this.CookiesPerClick;
         }
     }

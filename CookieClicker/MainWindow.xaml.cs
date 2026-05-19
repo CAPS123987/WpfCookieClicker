@@ -17,6 +17,7 @@ namespace CookieClicker
     public partial class MainWindow : Window
     {
         public Game game = new Game();
+        UpgradeWindow upgradeWindow;
 
         public MainWindow()
         {
@@ -26,12 +27,24 @@ namespace CookieClicker
         private void btnCookieClickEvent(object sender, RoutedEventArgs e)
         {
             game.handleClick();
-            updateMainWindow();
+            updateStats();
         }
 
-        public void updateMainWindow()
+        public void updateStats()
         {
             lblCookieCount.Content = "Počet sušenek: " + game.Cookies;
+            lblTotalClickCount.Content = "Počet kliknutí: " + game.TotalClicks;
+            lblCookieTotalCount.Content = "Počet získaných sušenek: " + game.TotalCookies;
+        }
+
+        private void openUpgradesWindow(object sender, RoutedEventArgs e)
+        {
+            if(upgradeWindow is not null && !upgradeWindow.IsClosed)
+            {
+                return;
+            }
+            upgradeWindow = new UpgradeWindow(game);
+            upgradeWindow.Show();
         }
     }
 }

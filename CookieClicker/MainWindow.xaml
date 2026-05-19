@@ -7,10 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnCookieClick" Click="btnCookieClickEvent" Margin="264,123,264,122" Background="Transparent" BorderThickness="0">
-            <Image Source="Resource/Choco_chip_cookie.png"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="27*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnCookieClick" Click="btnCookieClickEvent" Margin="264,123,156,122" Background="Transparent" BorderThickness="0">
+            <Image Source="/Choco_chip_cookie.png"/>
         </Button>
-        <Label x:Name="lblCookieCount" Content="Počet sušenek: 0" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="32" FontWeight="SemiBold"/>
+        <Label x:Name="lblCookieCount" Content="Počet sušenek: 0" HorizontalAlignment="Left" Margin="275,70,0,0" VerticalAlignment="Top" FontSize="32" FontWeight="SemiBold"/>
+
+        <Label x:Name="lblCookiePerClick" Content="Počet sušenek na klik: 1" HorizontalAlignment="Left" Margin="25,24,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"/>
+        <Label x:Name="lblCookiePerSecond" Content="Počet sušenek za sekundu: 0" HorizontalAlignment="Left" Margin="25,48,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"/>
+        <Label x:Name="lblTotalClickCount" Content="Počet kliknutí: 0" HorizontalAlignment="Left" Margin="25,70,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"/>
+        <Label x:Name="lblUpgradeCount" Content="Počet upgradů: 0" HorizontalAlignment="Left" Margin="25,113,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"/>
+        <Label x:Name="lblCookieTotalCount" Content="Počet získaných sušenek: 0" HorizontalAlignment="Left" Margin="25,91,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"/>
+
+        <Button Content="Otevřít upgrady" HorizontalAlignment="Left" Margin="23,144,0,0" VerticalAlignment="Top" Height="40" Width="136" FontSize="16" FontWeight="SemiBold" Click="openUpgradesWindow"/>
 
     </Grid>
 </Window>
